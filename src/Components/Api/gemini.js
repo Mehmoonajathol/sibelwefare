@@ -4,6 +4,7 @@ import knowledgeBase from "../data/knowledgebase";
 export async function getBotResponse(userMessage) {
   try {
     const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
+    console.log("API Key:", API_KEY);
 
     const response = await axios.post(
       "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent",
